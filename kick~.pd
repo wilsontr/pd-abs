@@ -1,0 +1,28 @@
+#N canvas 834 241 447 362 10;
+#X obj 102 52 inlet;
+#X obj 160 50 inlet;
+#X obj 218 49 inlet;
+#X obj 135 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 166 263 osc~;
+#X floatatom 227 91 5 0 0 0 - - -;
+#X floatatom 179 91 5 0 0 0 - - -;
+#X obj 151 192 *~;
+#X floatatom 243 167 5 0 0 0 - - -;
+#X obj 162 305 outlet~;
+#X obj 281 49 inlet;
+#X text 156 29 attack;
+#X text 214 29 decay;
+#X text 274 29 amplitude;
+#X obj 155 138 adenv~ 0;
+#X connect 0 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 5 0;
+#X connect 3 0 14 0;
+#X connect 4 0 9 0;
+#X connect 5 0 14 2;
+#X connect 6 0 14 1;
+#X connect 7 0 4 0;
+#X connect 8 0 7 1;
+#X connect 10 0 8 0;
+#X connect 14 0 7 0;
