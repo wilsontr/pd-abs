@@ -1,9 +1,9 @@
 #N canvas 443 22 629 691 10;
 #X obj 314 399 8bitshift;
 #X obj 149 129 knob 32 32 0 1 0 0 empty empty chance 0 -8 1 10 -1 -4160
--4160 1600 1;
+-4160 1200 1;
 #X obj 191 129 knob 32 32 0 1 0 0 empty empty change 0 -8 1 10 -1 -4160
--4160 2100 1;
+-4160 2200 1;
 #X floatatom 262 383 5 0 0 0 - - -;
 #X floatatom 260 299 5 0 0 0 - - -;
 #X floatatom 397 425 5 0 0 0 - - -;
@@ -20,8 +20,8 @@
 #X obj 38 57 inlet;
 #X obj 38 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 233 130 knob 32 32 0 16 0 0 empty empty quant 3 -8 1 10 -16662
--4160 -4160 1600 1;
+#X obj 233 130 knob 32 32 0 6 0 0 empty empty quant 3 -8 1 10 -16662
+-4160 -4160 3100 1;
 #X obj 82 371 + 1;
 #X obj 206 464 expr pow(2 \, $f1);
 #X floatatom 262 594 10 0 0 0 - - -;
@@ -34,9 +34,9 @@
 #X floatatom 109 191 5 0 0 0 - - -;
 #X floatatom 144 199 5 0 0 0 - - -;
 #X obj 316 39 loadbang;
-#X obj 131 57 inlet;
-#X obj 186 57 inlet;
-#X obj 240 57 inlet;
+#X obj 131 13 inlet;
+#X obj 186 13 inlet;
+#X obj 240 17 inlet;
 #X text 15 617 n+1 values;
 #X text 310 617 2^n values;
 #X text 7 38 bang;
@@ -58,6 +58,7 @@
 #X obj 249 424 / 255;
 #X obj 114 461 sig~;
 #X obj 172 472 sig~;
+#X obj 237 57 * 6;
 #X connect 0 0 22 0;
 #X connect 0 0 51 0;
 #X connect 0 1 5 0;
@@ -91,7 +92,7 @@
 #X connect 29 0 17 0;
 #X connect 30 0 1 0;
 #X connect 31 0 2 0;
-#X connect 32 0 17 0;
+#X connect 32 0 54 0;
 #X connect 36 0 46 0;
 #X connect 37 0 39 0;
 #X connect 38 0 37 0;
@@ -113,4 +114,5 @@
 #X connect 51 0 53 0;
 #X connect 52 0 37 0;
 #X connect 53 0 43 0;
+#X connect 54 0 17 0;
 #X coords 0 -1 1 1 170 70 2 100 100;

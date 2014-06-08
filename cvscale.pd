@@ -4,10 +4,10 @@
 #X obj 324 79 *;
 #X floatatom 157 66 5 0 0 0 - - -;
 #X floatatom 354 128 5 0 0 0 - - -;
-#X obj 103 115 nbx 4 14 -1 1 0 0 empty empty scale 0 -8 1 10 -262144
--1 -1 0.91 256;
-#X obj 103 144 nbx 4 14 -0 1 0 0 empty empty offset 0 -8 1 10 -262144
--1 -1 0.75 256;
+#X obj 103 115 nbx 4 14 -1 1 0 1 empty empty scale 0 -8 1 10 -262144
+-1 -1 1 256;
+#X obj 103 144 nbx 4 14 -0 1 0 1 empty empty offset 0 -8 1 10 -262144
+-1 -1 0 256;
 #X obj 242 347 +;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
