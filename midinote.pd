@@ -1,0 +1,24 @@
+#N canvas 372 181 500 388 10;
+#X obj 240 169 makenote;
+#X obj 249 205 noteout;
+#X msg 276 129 50;
+#X obj 143 115 nbx 3 14 0 64 0 1 empty empty channel 0 -8 1 10 -262144
+-1 -1 10 256;
+#X msg 327 124 50;
+#X obj 287 89 ii;
+#X obj 104 115 nbx 3 14 0 127 0 1 empty empty note 0 -8 1 10 -262144
+-1 -1 36 256;
+#X obj 251 19 inlet;
+#X obj 254 53 t b b;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 1;
+#X connect 3 0 1 2;
+#X connect 4 0 0 2;
+#X connect 5 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 1 3 0;
+#X coords 0 -1 1 1 80 33 2 100 100;

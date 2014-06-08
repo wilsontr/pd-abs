@@ -1,0 +1,21 @@
+#N canvas 195 232 450 300 10;
+#X obj 271 187 noteout;
+#X msg 206 68 1;
+#X obj 206 104 makenote 15 15;
+#X msg 315 107 \$1;
+#X obj 311 37 ii;
+#X obj 204 31 inlet;
+#X obj 316 76 pack \$1;
+#X obj 345 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 381 31 inlet;
+#X floatatom 354 136 5 0 0 0 - - -;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 2;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 0 2;
+#X connect 9 0 0 2;

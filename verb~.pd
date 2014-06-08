@@ -1,0 +1,42 @@
+#N canvas 0 22 816 638 10;
+#X obj 48 51 inlet~;
+#X obj 132 40 inlet~;
+#X obj 120 545 outlet~;
+#X obj 205 545 outlet~;
+#X obj 188 444 zrev1~ 10 10 10;
+#X obj 203 177 hsl 75 15 0 100 0 1 empty empty reverb_time -2 -8 1
+10 -262144 -4160 -1 7400 1;
+#X floatatom 507 350 5 0 0 0 - - -;
+#X obj 120 210 hsl 150 15 -1 1 0 1 empty empty mix -2 -8 1 10 -262144
+-4160 -1 6600 1;
+#X floatatom 536 431 5 0 0 0 - - -;
+#X obj 110 176 hsl 75 15 0 200 0 1 empty empty room_size -2 -8 1 10
+-262144 -4160 -1 1900 1;
+#X floatatom 428 277 5 0 0 0 - - -;
+#X obj 203 147 hsl 75 15 200 20000 1 1 empty empty lpf_cutoff -2 -8
+1 10 -262144 -4160 -1 6800 1;
+#X floatatom 390 239 5 0 0 0 - - -;
+#X obj 110 146 hsl 75 15 -99 18 0 1 empty empty recycle -2 -8 1 10
+-262144 -4160 -1 7400 1;
+#X obj 203 117 hsl 75 15 -99 18 0 1 empty empty 2nd_reflection_(db)
+-2 -8 1 10 -262144 -4160 -1 0 1;
+#X obj 110 117 hsl 75 15 -99 18 0 1 empty empty 1st_reflection_(db)
+-2 -8 1 10 -262144 -4160 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 4 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 2 3 0;
+#X connect 4 3 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 7;
+#X connect 7 0 8 0;
+#X connect 8 0 4 8;
+#X connect 9 0 10 0;
+#X connect 10 0 4 6;
+#X connect 11 0 12 0;
+#X connect 12 0 4 5;
+#X connect 13 0 4 4;
+#X connect 14 0 4 3;
+#X connect 15 0 4 2;
+#X coords 0 -1 1 1 190 130 2 100 100;

@@ -1,0 +1,36 @@
+#N canvas 81 196 640 487 10;
+#X obj 160 58 inlet~;
+#X obj 213 237 *~;
+#X obj 185 341 outlet~;
+#X obj 272 56 inlet;
+#X obj 209 179 vcf~;
+#X obj 303 113 nbx 5 14 1 20000 1 1 empty empty peak 0 -8 1 10 -262144
+-1 -1 150 256;
+#X obj 303 141 nbx 5 14 0 10 0 1 empty empty res 0 -8 1 10 -262144
+-1 -1 10 256;
+#X obj 303 171 nbx 5 14 0 2 0 1 empty empty gain 0 -8 1 10 -262144
+-1 -1 1 256;
+#X obj 220 55 inlet;
+#X obj 314 57 inlet;
+#X obj 374 86 * 2;
+#X obj 268 88 * 10;
+#X obj 217 91 * 20000;
+#X obj 235 128 sig~;
+#X obj 269 202 sig~;
+#X obj 269 241 lop~ 30;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 3 0 11 0;
+#X connect 4 0 1 0;
+#X connect 5 0 13 0;
+#X connect 6 0 4 2;
+#X connect 7 0 14 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 6 0;
+#X connect 12 0 5 0;
+#X connect 13 0 4 1;
+#X connect 14 0 15 0;
+#X connect 15 0 1 1;
+#X coords 0 -1 1 1 55 90 2 300 100;

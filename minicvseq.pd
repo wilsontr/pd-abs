@@ -1,0 +1,28 @@
+#N canvas 304 247 450 300 10;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-cv 16 float 1;
+#A 0 0.559999 0.733333 0.52 0.293333 0.32 0.613333 0.466666 0.146667
+0.146667 0.266666 0.52 0.813333 0.693333 0.546666 0.666666 0.506666
+;
+#X coords 0 0 15 1 150 75 1 0 0;
+#X restore 107 118 graph;
+#X obj 308 13 inlet;
+#X obj 355 16 inlet;
+#X obj 311 117 tabread \$0-cv;
+#X obj 310 203 outlet;
+#X floatatom 267 71 5 0 0 0 - - -;
+#X obj 310 51 counter 0 1 16;
+#X obj 310 90 - 1;
+#X obj 306 143 * -1;
+#X obj 308 169 + 1;
+#X floatatom 362 189 5 0 0 0 - - -;
+#X connect 1 0 6 0;
+#X connect 2 0 6 2;
+#X connect 3 0 8 0;
+#X connect 6 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 9 0 10 0;
+#X coords 0 -1 1 1 165 110 2 100 100;
