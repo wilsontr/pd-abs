@@ -9,19 +9,22 @@
 #X obj 264 164 easelseqnote;
 #X obj 225 -67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 174 -17 counter 0 1 5;
+#X obj 177 0 counter 0 1 5;
 #X obj 175 42 route 1 2 3 4 5;
-#X obj 294 175 vradio 12 1 0 3 empty empty stages 0 -8 1 10 -262144
--1 -1 1;
+#X obj 303 176 vradio 12 1 0 3 empty empty stages -8 -8 1 10 -262144
+-1 -1 2;
 #X obj 341 31 + 3;
 #X obj 201 498 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 200 522 outlet;
 #X obj 133 529 outlet;
 #X obj 298 114 ii;
-#X text 311 172 3;
-#X text 311 185 4;
-#X text 312 198 5;
+#X text 290 173 3;
+#X text 290 186 4;
+#X text 291 199 5;
+#X obj 328 6 int;
+#X obj 330 -32 * 5;
+#X obj 333 -84 inlet;
 #X connect 0 0 13 0;
 #X connect 0 1 1 0;
 #X connect 1 0 15 0;
@@ -42,4 +45,7 @@
 #X connect 12 0 9 4;
 #X connect 13 0 14 0;
 #X connect 16 0 11 0;
+#X connect 20 0 11 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
 #X coords 0 -1 1 1 180 175 2 150 160;

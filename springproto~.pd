@@ -1,0 +1,53 @@
+#N canvas 0 22 793 720 10;
+#X obj 236 433 *~ 1;
+#X obj 357 501 delwrite~ \$0-feedback 500;
+#X obj 249 168 *~ 1;
+#X obj 485 267 / 100;
+#X obj 328 467 hip~ 100;
+#X obj 86 186 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 40 256;
+#X obj 84 243 vd~ \$0-feedback 50;
+#X obj 281 447 lop~ 800;
+#X obj 295 195 lp4_butt~ 15000;
+#X obj 308 232 hp4_butt~ 15000;
+#X obj 322 297 allpass~ 200 25 1 -0.8;
+#X obj 324 318 allpass~ 200 25 1 -0.8;
+#X obj 323 342 allpass~ 200 25 1 -0.8;
+#X obj 323 368 allpass~ 200 25 1 -0.8;
+#X obj 524 202 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -77 256;
+#X obj 399 161 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1500 256;
+#X obj 427 240 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 20 256;
+#X obj 313 578 outlet~;
+#X obj 249 87 inlet~;
+#X obj 348 411 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 200 256;
+#X connect 0 0 7 0;
+#X connect 0 0 17 0;
+#X connect 2 0 0 0;
+#X connect 2 0 8 0;
+#X connect 3 0 10 2;
+#X connect 3 0 11 2;
+#X connect 3 0 12 2;
+#X connect 3 0 13 2;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 4 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 0 0;
+#X connect 14 0 3 0;
+#X connect 15 0 8 1;
+#X connect 15 0 9 1;
+#X connect 16 0 10 1;
+#X connect 16 0 11 1;
+#X connect 16 0 12 1;
+#X connect 16 0 13 1;
+#X connect 18 0 2 0;
+#X connect 19 0 7 1;
