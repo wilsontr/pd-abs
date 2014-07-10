@@ -1,0 +1,12 @@
+#N canvas 0 22 450 446 10;
+#X obj 213 77 inlet;
+#X obj 212 119 sig~;
+#X obj 145 202 crossfade~;
+#X obj 280 83 inlet;
+#X obj 145 336 outlet~;
+#X obj 128 77 inlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 2;
+#X connect 5 0 2 1;

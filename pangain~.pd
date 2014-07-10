@@ -1,0 +1,18 @@
+#N canvas 0 22 480 444 10;
+#X obj 258 117 pan~;
+#X obj 107 116 hsl 75 15 -45 45 0 1 empty empty pan -2 -8 1 10 -262144
+-1 -1 3700 1;
+#X obj 168 29 inlet~;
+#X obj 175 329 outlet~;
+#X obj 267 329 outlet~;
+#X obj 232 247 vols~;
+#X obj 108 147 hsl 75 15 0 100 0 1 empty empty gain -2 -8 1 10 -262144
+-1 -1 6300 1;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 6 0 5 2;
+#X coords 0 -1 1 1 90 70 2 100 100;

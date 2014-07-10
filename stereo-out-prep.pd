@@ -1,0 +1,22 @@
+#N canvas 0 22 914 695 10;
+#X obj 369 293 vols~;
+#X obj 399 239 hip~ 1;
+#X obj 334 240 hip~ 1;
+#X obj 328 266 clip~ -1 1;
+#X obj 403 265 clip~ -1 1;
+#X obj 108 119 hsl 100 20 50 120 0 1 empty empty vol -2 -8 1 10 -262144
+-1 -1 9900 1;
+#X obj 259 58 inlet~;
+#X obj 412 53 inlet~;
+#X obj 318 406 outlet~;
+#X obj 408 403 outlet~;
+#X connect 0 0 8 0;
+#X connect 0 1 9 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 2;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
+#X coords 0 -1 1 1 120 50 2 100 100;
