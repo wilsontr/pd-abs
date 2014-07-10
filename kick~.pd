@@ -14,7 +14,7 @@
 #X text 156 29 attack;
 #X text 214 29 decay;
 #X text 274 29 amplitude;
-#X obj 155 138 adenv~;
+#X obj 155 138 ead~;
 #X connect 0 0 3 0;
 #X connect 1 0 6 0;
 #X connect 2 0 5 0;

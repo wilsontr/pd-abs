@@ -3,6 +3,8 @@
 #X obj 249 109 bang~;
 #X obj 203 69 inlet~;
 #X obj 237 228 outlet;
-#X connect 0 0 3 0;
+#X obj 235 184 change;
+#X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
+#X connect 4 0 3 0;
