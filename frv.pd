@@ -28,8 +28,8 @@
 #X text 709 401 smooth;
 #X obj 671 155 * 0.3;
 #N canvas 623 107 450 300 noisytri 0;
-#X obj 154 437 outlet~;
-#X obj 101 341 tri~;
+#X obj 181 284 outlet~;
+#X obj 136 272 tri~;
 #X msg 148 233 100;
 #X obj 86 107 noise~;
 #X obj 90 151 snapshot~;
@@ -66,11 +66,11 @@ and the output is sent to the outlet.;
 #X text 19 559 wilsontr@gmail.com;
 #X text 20 578 2014;
 #X obj 129 115 hsl 100 15 0.01 60 1 1 empty empty probable_rate_of_change
--9 -8 1 10 -262144 -4160 -4160 4500 1;
+-9 -8 1 10 -262144 -4160 -4160 7200 1;
 #X text 588 15 frequency;
 #X obj 109 45 inlet;
 #X obj 105 73 * 60;
-#X text 251 101;
+#X text 251 101 comment;
 #X text 100 113 frv;
 #X connect 0 0 1 1;
 #X connect 1 0 11 0;
