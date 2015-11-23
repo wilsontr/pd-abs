@@ -11,7 +11,7 @@
 #X floatatom 294 431 6 0 0 0 - - -;
 #X obj 882 446 r \$0-bufferend;
 #X msg 878 388 loop 1;
-#X obj 726 287 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 726 287 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 734 318 sel 1;
 #X msg 787 404 stop;
@@ -85,21 +85,15 @@
 -1;
 #X obj 38 197 s \$0-playbutton;
 #X obj 182 71 sel 127;
-#X obj 144 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 168 264 s \$0-recbutton;
 #X obj 181 43 ctlin 45 2;
 #X obj 315 83 sel 127;
 #X msg 308 122 1;
-#X obj 287 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 314 45 ctlin 42 2;
 #X obj 308 162 s \$0-stopbutton;
 #X floatatom 132 63 5 0 0 0 - - -;
 #X obj 441 88 sel 127;
 #X msg 434 127 1;
-#X obj 403 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 440 50 ctlin 46 2;
 #X obj 434 167 s \$0-clearbutton;
 #X obj 27 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -109,30 +103,29 @@
 #X obj 405 359 spigot 1;
 #X msg 390 333 0;
 #X msg 458 314 1;
-#X msg 43 124 1;
-#X msg 172 120 1;
+#X msg 44 132 1;
+#X msg 175 142 1;
+#X obj 178 106 debounce 50;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 1 0 25 0;
-#X connect 4 0 5 0;
-#X connect 4 0 26 0;
-#X connect 7 0 4 0;
-#X connect 7 0 13 0;
-#X connect 8 0 9 0;
+#X connect 1 0 22 0;
+#X connect 4 0 24 0;
+#X connect 6 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 8 0;
 #X connect 8 0 10 0;
-#X connect 9 0 12 0;
-#X connect 11 0 8 0;
-#X connect 14 0 15 0;
-#X connect 14 0 16 0;
-#X connect 15 0 18 0;
-#X connect 17 0 14 0;
-#X connect 20 0 22 0;
-#X connect 21 0 23 0;
-#X connect 21 1 20 0;
-#X connect 23 0 22 1;
-#X connect 24 0 22 1;
-#X connect 25 0 3 0;
-#X connect 26 0 6 0;
+#X connect 9 0 7 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 14 0 12 0;
+#X connect 17 0 19 0;
+#X connect 18 0 20 0;
+#X connect 18 1 17 0;
+#X connect 20 0 19 1;
+#X connect 21 0 19 1;
+#X connect 22 0 3 0;
+#X connect 23 0 5 0;
+#X connect 24 0 23 0;
 #X restore 589 162 pd midicontrol;
 #N canvas 476 88 1248 750 loopercontrols 0;
 #X msg 225 409 reset;
