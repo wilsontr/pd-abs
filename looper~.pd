@@ -78,7 +78,7 @@
 #X restore 586 219 pd midifeedback;
 #X obj 631 324 s \$0-playled;
 #X floatatom 764 274 5 0 0 0 - - -;
-#N canvas 28 403 780 514 midicontrol 0;
+#N canvas 28 403 780 514 midicontrol 1;
 #X obj 51 36 ctlin 41 2;
 #X obj 52 74 sel 127;
 #X obj 14 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -88,9 +88,9 @@
 #X obj 168 264 s \$0-recbutton;
 #X obj 181 43 ctlin 45 2;
 #X obj 315 83 sel 127;
-#X msg 308 122 1;
+#X msg 307 153 1;
 #X obj 314 45 ctlin 42 2;
-#X obj 308 162 s \$0-stopbutton;
+#X obj 307 193 s \$0-stopbutton;
 #X floatatom 132 63 5 0 0 0 - - -;
 #X obj 441 88 sel 127;
 #X msg 434 127 1;
@@ -103,16 +103,18 @@
 #X obj 405 359 spigot 1;
 #X msg 390 333 0;
 #X msg 458 314 1;
-#X msg 44 132 1;
+#X msg 43 143 1;
 #X msg 175 142 1;
-#X obj 178 106 debounce 50;
+#X obj 178 105 debounce 200;
+#X obj 50 105 debounce 200;
+#X obj 311 116 debounce 200;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 1 0 22 0;
+#X connect 1 0 25 0;
 #X connect 4 0 24 0;
 #X connect 6 0 4 0;
 #X connect 6 0 11 0;
-#X connect 7 0 8 0;
+#X connect 7 0 26 0;
 #X connect 8 0 10 0;
 #X connect 9 0 7 0;
 #X connect 12 0 13 0;
@@ -126,6 +128,8 @@
 #X connect 22 0 3 0;
 #X connect 23 0 5 0;
 #X connect 24 0 23 0;
+#X connect 25 0 22 0;
+#X connect 26 0 8 0;
 #X restore 589 162 pd midicontrol;
 #N canvas 476 88 1248 750 loopercontrols 0;
 #X msg 225 409 reset;
